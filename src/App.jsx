@@ -1,9 +1,9 @@
+import { useState } from 'react';
 import './App.css';
 import { TODOS } from './data/todo';
 import AddTodo from './components/AddTodo';
 import Todos from './components/Todos';
 import Navbar from './components/Navbar';
-import { useState } from 'react';
 
 
 function App() {
@@ -15,13 +15,17 @@ function App() {
     setTodos(updatedTod0s)
   }
 
-  const onAdd = (Todo) => {
+  const onAdd = async (Todo) => {
     const newTodo = {
       id: todos.length + 2,
       title: Todo
     }
 
     setTodos([...todos, newTodo])
+
+    const res = await fetch("localhost:5000/todos", {
+      
+    })
   }
 
   return (

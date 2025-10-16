@@ -13,7 +13,6 @@ const AddTodo = ({ onAdd }) => {
             <form onSubmit={submitTodo}>
                 <div className="mb-6 w-full">
                 <input type="text" className='border rounded-md px-3 py-2 w-full' placeholder='Enter Todo title' onChange={ (e) => setTodo(e.target.value) } value={todo} />
-                <p>{todo}</p>
                 </div>
                 
                 <div>
